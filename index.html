@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doverseas | Your Trusted Global Trade Partner</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Custom Styles for Light Theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* White base */
+            color: #1f2937; /* Dark Gray text */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .hero-section {
+            background-image: url('images/bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .btn-primary {
+            background-color: #1e3a8a; /* Navy Blue */
+            color: #ffffff;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #1c3473;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.2);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #1e3a8a; /* Navy Blue */
+            border: 2px solid #1e3a8a;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        .btn-secondary:hover {
+            background-color: #1e3a8a;
+            color: #ffffff;
+        }
+        .section-title {
+            color: #d4af37; /* Gold Accent */
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+        }
+        .accordion-content.open {
+            max-height: 1000px; /* Adjust as needed */
+            transition: max-height 1s ease-in-out;
+        }
+        .text-navy {
+            color: #1e3a8a;
+        }
+        .border-gold {
+            border-color: #d4af37;
+        }
+        .text-gold {
+            color: #d4af37;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 1. Header / Navbar -->
+    <header id="header" class="sticky top-0 z-50 w-full glass-nav">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3">
+                <img src="images/do.jpg" alt="Doverseas Logo" class="h-20 w-30 rounded-xl">
+                <span class="text-2xl font-bold text-gray-800">Doverseas</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="#home" class="text-black-600 hover:text-navy transition-colors duration-300">Home</a>
+                <a href="#about" class="text-black-600 hover:text-navy transition-colors duration-300">About Us</a>
+                <a href="#services" class="text-black-600 hover:text-navy transition-colors duration-300">Services</a>
+                <a href="#countries" class="text-black-600 hover:text-navy transition-colors duration-300">Countries</a>
+                <a href="#why-us" class="text-black-600 hover:text-navy transition-colors duration-300">Why Choose Us</a>
+                <a href="#contact" class="text-black-600 hover:text-navy transition-colors duration-300">Contact</a>
+                <a href="tel:+919911151874" class="btn-primary text-sm px-4 py-2 rounded-md font-semibold">
+                    <i class="fas fa-phone-alt mr-2"></i>+91-9911151874
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95">
+            <a href="#home" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Home</a>
+            <a href="#about" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">About Us</a>
+            <a href="#services" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Services</a>
+            <a href="#countries" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Countries</a>
+            <a href="#why-us" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Why Choose Us</a>
+            <a href="#contact" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Contact</a>
+            <a href="tel:+919911151874" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Call +91-9911151874</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Hero Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center text-center hero-section">
+            <div class="absolute top-0 left-0 w-full h-full hero-overlay z-10"></div>
+            <div class="relative z-20 px-4">
+                <h2 class="text-5xl text-navy font-extrabold mb-2 ">D OVERSEAS</h2>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight tracking-tight text-white">
+                    Your Trusted Global Trade Partner
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-black-700">
+                    Seamless Freight | Custom Clearance | Import-Export Solutions
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#contact" class="btn-primary px-8 py-3 rounded-lg text-lg w-full sm:w-auto">
+                        Request a Quote
+                    </a>
+                    <a href="#services" class="btn-secondary px-8 py-3 rounded-lg text-lg w-full sm:w-auto">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About Us Section -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-4xl text-navy font-extrabold mb-2">WHO WE ARE</p>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Pioneering Global Logistics</h2>
+                        <p class="text-gray-600">
+                            Doverseas is a global logistics and freight forwarding company headquartered in New Delhi, India. We specialize in custom clearance, international freight forwarding, and import-export operations. With a vast network across Canada, China, Thailand, Germany, USA, Russia, Hong Kong, Korea, Indonesia, UK, and all of Europe, we ensure seamless international trade for businesses of all sizes.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/about.png" alt="Global Logistics Network" class="rounded-xl shadow-2xl w-full h-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Our Founder & CEO -->
+        <section id="founder" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="bg-gray-50 p-8 rounded-lg shadow-xl grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-1 flex justify-center">
+                        <img src="images/gm.jpg" alt="Mr. Deepanshu Goel, Founder & CEO" class="rounded-full w-60 h-90  object-cover border-4 border-gold">
+                    </div>
+                    <div class="md:col-span-2 text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-gray-800">Mr. Deepanshu Goel</h3>
+                        <p class="text-gold font-semibold mb-4">Founder & CEO</p>
+                        <p class="text-gray-600">
+                           With over a decade of experience in global logistics and trade regulations, Deepanshu Goel founded Doverseas with the vision of simplifying cross-border commerce. Under his leadership, the company has scaled into a global brand, offering premium and reliable solutions for international businesses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Vision & Mission Section -->
+        <section id="vision" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Guiding Principles</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="text-center">
+                        <i class="fas fa-eye text-4xl text-gold mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Our Vision</h3>
+                        <p class="text-gray-700 text-lg italic">
+                            “To become the most trusted and innovative logistics and trade facilitator across the globe.”
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center"><i class="fas fa-bullseye text-gold mr-2"></i>Our Mission</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-gold mt-1 mr-3"></i><span>Offer highly compliant, fast, and efficient freight services.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-gold mt-1 mr-3"></i><span>Bridge regulatory gaps for seamless custom clearance.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-gold mt-1 mr-3"></i><span>Enable startups and enterprises to scale internationally.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-gold mt-1 mr-3"></i><span>Create a transparent, customer-first ecosystem in global trade.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Services We Offer -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <p class="section-title mb-2">WHAT WE DO</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Core Services</h2>
+                </div>
+                <div class="max-w-4xl mx-auto" id="accordion-container">
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item border border-gray-200 rounded-lg mb-3 shadow-sm">
+                        <button class="accordion-header w-full text-left py-4 px-6 flex justify-between items-center focus:outline-none bg-gray-50 rounded-t-lg">
+                            <span class="text-xl font-semibold text-gray-800"><i class="fas fa-shipping-fast text-gold mr-4"></i>Freight Forwarding</span>
+                            <i class="fas fa-chevron-down text-navy transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-5 bg-white rounded-b-lg">
+                            <ul class="list-disc list-inside text-gray-600 space-y-2 pt-4">
+                                <li>Air & Sea Freight</li>
+                                <li>Multimodal Transport</li>
+                                <li>Full Container Load (FCL) & Less than Container Load (LCL)</li>
+                                <li>Cargo Insurance, Tracking & Documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item border border-gray-200 rounded-lg mb-3 shadow-sm">
+                        <button class="accordion-header w-full text-left py-4 px-6 flex justify-between items-center focus:outline-none bg-gray-50 rounded-t-lg">
+                            <span class="text-xl font-semibold text-gray-800"><i class="fas fa-file-alt text-gold mr-4"></i>Custom Clearance</span>
+                            <i class="fas fa-chevron-down text-navy transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-5 bg-white rounded-b-lg">
+                             <ul class="list-disc list-inside text-gray-600 space-y-2 pt-4">
+                                <li>Import & Export Clearance</li>
+                                <li>HS Code Classification</li>
+                                <li>Duty & Tax Calculation</li>
+                                <li>Regulatory & Legal Compliance & Port Handling</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item border border-gray-200 rounded-lg mb-3 shadow-sm">
+                        <button class="accordion-header w-full text-left py-4 px-6 flex justify-between items-center focus:outline-none bg-gray-50 rounded-t-lg">
+                            <span class="text-xl font-semibold text-gray-800"><i class="fas fa-briefcase text-gold mr-4"></i>Import / Export Consultation</span>
+                            <i class="fas fa-chevron-down text-navy transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-5 bg-white rounded-b-lg">
+                            <ul class="list-disc list-inside text-gray-600 space-y-2 pt-4">
+                                <li>End-to-End Trade Documentation</li>
+                                <li>Product Sourcing and Buyer Connect</li>
+                                <li>Risk & Regulatory Compliance Advisory</li>
+                                <li>Trade License and Certification Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Accordion Item 4 -->
+                    <div class="accordion-item border border-gray-200 rounded-lg shadow-sm">
+                        <button class="accordion-header w-full text-left py-4 px-6 flex justify-between items-center focus:outline-none bg-gray-50 rounded-t-lg">
+                            <span class="text-xl font-semibold text-gray-800"><i class="fas fa-globe-americas text-gold mr-4"></i>Country-Specific Logistics</span>
+                            <i class="fas fa-chevron-down text-navy transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-5 bg-white rounded-b-lg">
+                            <p class="text-gray-600 pt-4">We provide tailored logistics and compliance services for specific trade routes, including: Canada, USA, Germany, Russia, China, Hong Kong, Korea, Indonesia, UK, and the wider European region.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Countries We Serve -->
+        <section id="countries" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <p class="section-title mb-2">GLOBAL REACH</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Active Trade Lanes</h2>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <!-- Country Cards -->
+                    <div class="bg-white p-5 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"><div class="text-4xl mb-3">🇨🇦</div><h4 class="font-bold text-gray-800 text-lg">Canada</h4></div>
+                    <div class="bg-white p-5 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"><div class="text-4xl mb-3">🇺🇸</div><h4 class="font-bold text-gray-800 text-lg">USA</h4></div>
+                    <div class="bg-white p-5 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"><div class="text-4xl mb-3">🇬🇧</div><h4 class="font-bold text-gray-800 text-lg">UK</h4></div>
+                    <div class="bg-white p-5 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"><div class="text-4xl mb-3">🇩🇪</div><h4 class="font-bold text-gray-800 text-lg">Germany</h4></div>
+                    <div class="bg-white p-5 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"><div class="text-4xl mb-3">🇷🇺</div><h4 class="font-bold text-gray-800 text-lg">Russia</h4></div>
+                    <div class="bg-white p-5 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"><div class="text-4xl mb-3">🇨🇳</div><h4 class="font-bold text-gray-800 text-lg">China</h4></div>
+                    <div class="bg-white p-5 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"><div class="text-4xl mb-3">🇹🇭</div><h4 class="font-bold text-gray-800 text-lg">Thailand</h4></div>
+                    <div class="bg-white p-5 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"><div class="text-4xl mb-3">🇭🇰</div><h4 class="font-bold text-gray-800 text-lg">Hong Kong</h4></div>
+                    <div class="bg-white p-5 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"><div class="text-4xl mb-3">🇰🇷</div><h4 class="font-bold text-gray-800 text-lg">Korea</h4></div>
+                    <div class="bg-white p-5 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"><div class="text-4xl mb-3">🇮🇩</div><h4 class="font-bold text-gray-800 text-lg">Indonesia</h4></div>
+                    <div class="bg-white p-5 rounded-lg text-center transform hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"><div class="text-4xl mb-3">🇪🇺</div><h4 class="font-bold text-gray-800 text-lg">Europe</h4></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Why Choose Us -->
+        <section id="why-us" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <p class="section-title mb-2">OUR ADVANTAGE</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">The Doverseas Difference</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gold"><i class="fas fa-calendar-check text-2xl text-gold mb-3"></i><h3 class="text-xl font-bold text-gray-800 mb-2">10+ Years in Trade</h3><p class="text-gray-600">Decades of combined experience ensures flawless execution.</p></div>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gold"><i class="fas fa-map-marked-alt text-2xl text-gold mb-3"></i><h3 class="text-xl font-bold text-gray-800 mb-2">Real-Time Tracking</h3><p class="text-gray-600">24x7 visibility into your shipment's journey.</p></div>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gold"><i class="fas fa-tasks text-2xl text-gold mb-3"></i><h3 class="text-xl font-bold text-gray-800 mb-2">Custom-Tailored Plans</h3><p class="text-gray-600">Logistics solutions designed specifically for your needs.</p></div>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gold"><i class="fas fa-shield-alt text-2xl text-gold mb-3"></i><h3 class="text-xl font-bold text-gray-800 mb-2">Legal & Compliance</h3><p class="text-gray-600">Expert support to navigate complex regulations.</p></div>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gold"><i class="fas fa-network-wired text-2xl text-gold mb-3"></i><h3 class="text-xl font-bold text-gray-800 mb-2">Strong Global Network</h3><p class="text-gray-600">Trusted partners in every major port and city.</p></div>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gold"><i class="fas fa-tachometer-alt text-2xl text-gold mb-3"></i><h3 class="text-xl font-bold text-gray-800 mb-2">99.9% On-Time Record</h3><p class="text-gray-600">Reliability you can count on for mission-critical deliveries.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Client Testimonials -->
+        <section id="testimonials" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <p class="section-title mb-2">CLIENT FEEDBACK</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">What Our Partners Say</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <p class="text-gray-600 italic mb-4">“Doverseas handled our China to Germany shipment with ease and professionalism. Their team was responsive and kept us informed every step of the way.”</p>
+                        <div class="flex items-center">
+                            <div class="ml-4">
+                                <p class="font-bold text-gray-800">Ananya Sharma</p>
+                                <p class="text-sm text-gold">Logistics Manager, Finovate Pvt Ltd</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <p class="text-gray-600 italic mb-4">“Excellent tracking and customer support. We were able to clear our imports much faster than with our previous agents. Highly recommended for any business in Hong Kong.”</p>
+                        <div class="flex items-center">
+                            <div class="ml-4">
+                                <p class="font-bold text-gray-800">Jason Lee</p>
+                                <p class="text-sm text-gold">Import Head, Hong Kong International</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Contact Us -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <p class="section-title mb-2">GET IN TOUCH</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Contact Us For A Quote</h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Head Office - New Delhi</h3>
+                        <div class="space-y-4 text-gray-600">
+                            <p><i class="fas fa-map-marker-alt text-gold w-6 text-center mr-3"></i>New Delhi, India</p>
+                            <p><i class="fas fa-phone-alt text-gold w-6 text-center mr-3"></i>+91-9911151874</p>
+                            <p><i class="fas fa-envelope text-gold w-6 text-center mr-3"></i>contact@doverseas.com</p>
+                        </div>
+                        <div class="mt-8">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.4812941296!2d77.06889754725782!3d28.52728034221655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1672836250849!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg"></iframe>
+                        </div>
+                    </div>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full bg-gray-50 border border-gray-300 rounded-lg p-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-navy">
+                        <input type="email" placeholder="Your Email" class="w-full bg-gray-50 border border-gray-300 rounded-lg p-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-navy">
+                        <input type="text" placeholder="Your Country" class="w-full bg-gray-50 border border-gray-300 rounded-lg p-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-navy">
+                        <textarea rows="4" placeholder="Your Message" class="w-full bg-gray-50 border border-gray-300 rounded-lg p-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-navy"></textarea>
+                        <button type="submit" class="w-full btn-primary py-3 rounded-lg text-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 11. Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+             <div class="text-center mb-8">
+                <h4 class="text-lg font-semibold mb-4">Subscribe to our Newsletter</h4>
+                 <p class="text-gray-400 mb-4">Get the latest insights on global trade and compliance.</p>
+                <form class="max-w-md mx-auto flex">
+                    <input type="email" placeholder="Enter your email" class="flex-grow bg-gray-700 border border-gray-600 rounded-l-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-gold">
+                    <button type="submit" class="bg-gold text-navy px-6 rounded-r-lg font-semibold">Subscribe</button>
+                </form>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 pt-8 border-t border-gray-700">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-gold">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-gold">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-gold">Services</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-gold">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-gold">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold">Download Brochure</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-gold">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-gold text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-xl"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; <span id="year"></span> Doverseas. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+            
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // Accordion Functionality
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('i.fa-chevron-down');
+
+                    document.querySelectorAll('.accordion-content.open').forEach(openContent => {
+                        if (openContent !== content) {
+                            openContent.classList.remove('open');
+                            openContent.previousElementSibling.querySelector('i.fa-chevron-down').classList.remove('rotate-180');
+                        }
+                    });
+
+                    content.classList.toggle('open');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+
+            // Set current year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+
+</body>
+</html>
